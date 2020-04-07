@@ -3,6 +3,7 @@ import numpy as np
 import scipy
 from keras.preprocessing import image
 from keras.applications import inception_v3
+from keras import backend as K
 
 def resize_img(img, size):
     img = np.copy(img)
