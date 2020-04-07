@@ -9,7 +9,7 @@ from keras import backend as K
 K.set_learning_phase(0)
 
 """ Load pretrained inception v3 model """
-inception_v3_model = inception_v3.InceptionV3(weights='imagenet', include_top=False)
+model = inception_v3.InceptionV3(weights='imagenet', include_top=False)
 
 """ Set up the DeepDream configuration """
 layer_contributions = {
