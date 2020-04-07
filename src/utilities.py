@@ -1,6 +1,6 @@
 ## Notes taken from Deep Learning with Python by Francois Chollet Chapter 8 - Generative Learning
 import numpy as np
-import scipy.misc
+import imageio
 from keras.preprocessing import image
 from keras.applications import inception_v3
 from keras import backend as K
@@ -11,7 +11,7 @@ def resize_img(img, size):
     return scipy.ndimage.zoom(img, factors, order=1)
 
 def save_img(img, fname):
-    pil_img = deprocess_image(np.copy(img))
+    imageio.imwrite(fname, pil_img)
     scipy.misc.imsave(fname, pil_img)
 
 def preprocess_image(image_path):
