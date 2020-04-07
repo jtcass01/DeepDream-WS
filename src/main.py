@@ -6,6 +6,8 @@ import numpy as np
 from keras.applications import inception_v3
 from keras import backend as K
 
+from utilities import resize_img, save_img, preprocess_image, deprocess_image
+
 K.set_learning_phase(0)
 
 """ Load pretrained inception v3 model """
@@ -32,7 +34,7 @@ for layer_name in layer_contributions:
 
     # Add the L2 norm of the features of a layer to the loss. Border artifacts are avoided by only involving nonborder pixels inthe loss.
     scaling = K.prod(K.cast(K.shape(activation), 'float32'))
-    print(loss)
+#    print(loss)
     loss += coeff * K.sum(K.square(activation[:, 2:-2, 2:-2, :])) / scaling
 
 
