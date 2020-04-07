@@ -66,8 +66,8 @@ num_octave = 3
 octave_scale = 1.4
 iterations = 20
 max_loss = 10.
-test_image_name = "sunrise_virginia_beach"
-base_image_path = os.getcwd() + os.path.sep + ".." + os.path.sep + "test_images" + os.path.sep + "sunrise_virginia_beach.jpg"
+test_image_name = "Bethel_Beach"
+base_image_path = os.getcwd() + os.path.sep + ".." + os.path.sep + "test_images" + os.path.sep + test_image_name + ".jpeg"
 
 img = preprocess_image(base_image_path)
 original_shape = img.shape[1:3]
