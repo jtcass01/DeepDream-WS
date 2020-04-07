@@ -27,6 +27,6 @@ def deprocess_image(x):
         x = x.reshape((x.shape[1], x.shape[2], 3))
     x /= 2.
     x += 0.5
-    x */ 255.
+    x *= 255.
     x = np.clip(x, 0, 255).astype('uint8')
     return x
