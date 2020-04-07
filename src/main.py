@@ -4,7 +4,7 @@ import os
 import numpy as np
 
 from keras.applications import inception_v3
-from tensorflow.keras import backend as K
+from keras import backend as K
 
 K.set_learning_phase(0)
 
@@ -24,7 +24,7 @@ layer_contributions = {
 layer_dict = dict([(layer.name, layer) for layer in model.layers])
 
 # Define Loss by adding layer contributions to this variable
-loss = K.variable(0.)
+loss = 0.
 for layer_name in layer_contributions:
     coeff = layer_contributions[layer_name]
     # retrieve the layer's output
