@@ -66,6 +66,7 @@ num_octave = 3
 octave_scale = 1.4
 iterations = 20
 max_loss = 10.
+test_image_name = "sunrise_virginia_beach"
 base_image_path = os.getcwd() + os.path.sep + ".." + os.path.sep + "test_images" + os.path.sep + "sunrise_virginia_beach.jpg"
 
 img = preprocess_image(base_image_path)
@@ -90,5 +91,5 @@ for shape in successive_shapes:
 
     img += lost_detail
     shrunk_original_img = resize_img(original_img, shape)
-    save_img(img, fname='dream_at_scale_' + str(shape) + '.png')
-save_img(img, fname='final_dream.png')
+    save_img(img, fname='output' + os.path.sep + test_image_name + '_dream_at_scale_' + str(shape) + '.png')
+save_img(img, fname='output' + os.path.sep + test_image_name+ '_final_dream.png')
