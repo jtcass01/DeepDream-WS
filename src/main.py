@@ -91,5 +91,5 @@ for shape in successive_shapes:
 
     img += lost_detail
     shrunk_original_img = resize_img(original_img, shape)
-    save_img(img, fname='output' + os.path.sep + test_image_name + '_dream_at_scale_' + str(shape) + '.png')
-save_img(img, fname='output' + os.path.sep + test_image_name+ '_final_dream.png')
+    save_img(img, fname='..' + os.path.sep + 'output' + os.path.sep + test_image_name + '_dream_at_scale_' + str(shape) + '.png')
+save_img(img, fname='..' + os.path.sep + 'output' + os.path.sep + test_image_name+ '_final_dream.png')
