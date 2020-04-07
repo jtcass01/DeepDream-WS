@@ -32,6 +32,7 @@ for layer_name in layer_contributions:
 
     # Add the L2 norm of the features of a layer to the loss. Border artifacts are avoided by only involving nonborder pixels inthe loss.
     scaling = K.prod(K.cast(K.shape(activation), 'float32'))
+    print(loss)
     loss += coeff * K.sum(K.square(activation[:, 2:-2, 2:-2, :])) / scaling
 
 
