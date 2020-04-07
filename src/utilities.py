@@ -1,6 +1,7 @@
 ## Notes taken from Deep Learning with Python by Francois Chollet Chapter 8 - Generative Learning
 import numpy as np
 import imageio
+import scipy
 from keras.preprocessing import image
 from keras.applications import inception_v3
 from keras import backend as K
